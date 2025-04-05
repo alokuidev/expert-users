@@ -1,4 +1,5 @@
-import UsersList from "./pages/UsersList";
+import UsersList from "./Pages/UsersList";
+import './App.css'
 
 const App = () => {
   return (

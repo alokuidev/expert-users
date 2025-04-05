@@ -34,7 +34,7 @@ const AlbumModal = ({ userId, onClose }: { userId: number; onClose: () => void }
   }, [selectedAlbumId]);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center h-screen">
       <div className="bg-white rounded-lg p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
         <button
           className="absolute top-2 right-4 text-gray-500 hover:text-red-600 text-xl"
@@ -44,7 +44,7 @@ const AlbumModal = ({ userId, onClose }: { userId: number; onClose: () => void }
         </button>
 
         {loading ? (
-          <p className="text-center text-sm text-gray-500">Loading...</p>
+          <div className="loader text-center text-sm text-gray-500 mx-auto"></div>
         ) : !selectedAlbumId ? (
           <>
             <h2 className="text-2xl font-bold mb-4 text-indigo-700">User Albums</h2>
