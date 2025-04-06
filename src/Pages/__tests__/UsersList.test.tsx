@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import UsersList from '../../Pages/UsersList';
 import * as usersApi from '../../api/users';
-
+import { vi } from 'vitest';
 const mockUsers = [
   {
     id: 1,
@@ -15,7 +15,7 @@ const mockUsers = [
   }
 ];
 
-jest.spyOn(usersApi, 'UserApi').mockResolvedValue(mockUsers);
+vi.spyOn(usersApi, 'UserApi').mockResolvedValue(mockUsers);
 
 test('renders list of users from API', async () => {
   render(<UsersList />);

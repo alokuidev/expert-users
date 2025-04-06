@@ -1,54 +1,114 @@
-# React + TypeScript + Vite
+# Expert Users Directory (FYLTURA Frontend Test)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based web application that displays a list of users, allows viewing albums per user, and displays photos with both small and large versions — powered by [JSONPlaceholder API](https://jsonplaceholder.typicode.com/). Built as a frontend test assignment for Expert Sieve (FYLTURA).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **React Router**
+- **Axios**
+- **Vitest** (Unit testing)
+- **Cypress** (End-to-End testing)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+##  Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Clone the Repository
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+git clone https://gitlab.fyltura.de/YOUR-REPO.git
+cd expert-users
+2. Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Run the Application
+bash
+Copy
+Edit
+npm run dev
+App will be running at http://localhost:5173
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Run Unit Tests (Vitest)
+bash
+Copy
+Edit
+npm run test
+Tests are written using @testing-library/react and vitest.
+
+Run E2E Tests (Cypress)
+bash
+Copy
+Edit
+npx cypress open
+This opens the Cypress Test Runner. Choose E2E Testing and run the test cases.
+
+To run E2E tests in headless mode:
+
+bash
+Copy
+Edit
+npx cypress run
+✅ Features Implemented
+✅ Fetch and display users and their addresses
+
+✅ View albums of a selected user inside a modal
+
+✅ View photos of a selected album with small and big versions
+
+✅ Modular structure with reusable components
+
+✅ Responsive UI using Tailwind CSS
+
+✅ Unit tests with Vitest
+
+✅ End-to-End tests with Cypress
+
+📁 Project Structure
+css
+Copy
+Edit
+src/
+├── Pages/
+│   └── UsersList.tsx
+├── components/
+│   ├── UserCard.tsx
+│   ├── AlbumModal.tsx
+│   └── PhotoGallery.tsx
+├── api/
+│   ├── usersApi.ts
+│   ├── albumApi.ts
+│   └── photoApi.ts
+├── __tests__/ (Unit tests)
+└── App.tsx
+ Git Workflow
+All progress was committed with meaningful messages like:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "feat: implemented user album & photo gallery with tests"
+git push origin main
+👨‍💻 Author
+Alok Singh
+Frontend Developer
+📍 Based in Austria
+📧 aloksingh.dev@gmail.com
+
+📝 Notes
+The app uses public JSONPlaceholder APIs (no auth or API key required).
+
+Fully functional and test-covered.
+
+Clean and intuitive UX for exploring users and their albums/photos.
+
+Thanks for the opportunity! 🙏
+Looking forward to your feedback.

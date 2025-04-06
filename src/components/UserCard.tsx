@@ -7,7 +7,7 @@ type UserCardProps = {
 
 const UserCard = ({ user, onClick }: UserCardProps) => {
   return (
-    <div
+    <div data-testid="user-card"
       onClick={() => onClick(user.id)}
       className="p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer"
     >

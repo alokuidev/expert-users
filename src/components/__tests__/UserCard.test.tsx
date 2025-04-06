@@ -2,6 +2,8 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import UserCard from '../../components/UserCard';
 import { User } from '../../types/User';
 
+import { vi } from 'vitest';
+
 const mockUser: User = {
   id: 1,
   name: 'John Doe',
@@ -24,7 +26,7 @@ const mockUser: User = {
 };
 
 test('renders user info and triggers onClick', () => {
-  const onClickMock = jest.fn();
+  const onClickMock = vi.fn();
   render(<UserCard user={mockUser} onClick={onClickMock} />);
 
   expect(screen.getByText(/John Doe/i)).toBeInTheDocument();

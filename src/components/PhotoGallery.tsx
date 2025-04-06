@@ -23,6 +23,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, onBack }) => {
       {/* Large Image Section */}
       <div className="mb-4">
         <img
+          data-testid="photo-large"  
           src={selectedImage}
           alt="Large view"
           className="w-full max-w-[500px] mx-auto rounded-lg"
@@ -42,6 +43,7 @@ const PhotoGallery: React.FC<PhotoGalleryProps> = ({ photos, onBack }) => {
             onClick={() => handleThumbnailClick(photo.url)} // Set large image on thumbnail click
           >
             <img
+              data-testid="photo-thumb"  
               src={photo.thumbnailUrl}
               alt={photo.title}
               className="w-full"

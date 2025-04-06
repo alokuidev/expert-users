@@ -34,7 +34,7 @@ const AlbumModal = ({ userId, onClose }: { userId: number; onClose: () => void }
   }, [selectedAlbumId]);
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center h-screen">
+    <div data-testid="album-modal" className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center h-screen">
       <div className="bg-white rounded-lg p-6 w-full max-w-4xl max-h-[90vh] overflow-y-auto relative">
         <button
           className="absolute top-2 right-4 text-gray-500 hover:text-red-600 text-xl"
@@ -51,6 +51,7 @@ const AlbumModal = ({ userId, onClose }: { userId: number; onClose: () => void }
             <div className="space-y-3">
               {albums.map((album) => (
                 <div
+                  data-testid="album-item"
                   key={album.id}
                   onClick={() => setSelectedAlbumId(album.id)}
                   className="flex items-center gap-2 cursor-pointer p-3 border rounded hover:bg-gray-100 transition"
