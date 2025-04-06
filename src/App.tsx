@@ -16,7 +16,7 @@ const App = () => {
       </main>
 
       <footer className="p-4 text-center text-xs text-gray-500">
-        © {new Date().getFullYear()} Bestie Inc. — Built with ❤️ + ⚛️
+        © {new Date().getFullYear()} @AlokUIDev
       </footer>
     </div>
   );
